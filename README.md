@@ -1,5 +1,5 @@
 
-# CC:-ASP.NET
+# CC: ARPANET
 
 ## The goal of this program is to facilitate a connection between computers in ComputerCraft using Modems and Lua. 
 The majority of this program will be in Lua.
