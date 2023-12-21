@@ -7,6 +7,7 @@ The majority of this program will be in Lua.
 ### Todo
 
 - ~~detect peripherals (disk drive and modem)~~
+- transfer network files from disk to root drive or programs folder
 - Make a connection program
 - Allow connection to specific computers (using UUIDs or other methods)
 - transmit and recieve messages
