@@ -51,8 +51,11 @@ if modem then
     recieveChannelInt = tonumber(recieveChannel) -- defines the recieveChannel as an integer, as modem.open can only handle integer input.
 
     print("Opening channel " .. recieveChannelInt .. "...")
-
+    
     modem.open(recieveChannelInt)
+
+    print("Opened Channel " .. recieveChannelInt .. "...")
+    
     local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
     repeat
         event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
