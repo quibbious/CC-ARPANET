@@ -11,7 +11,15 @@ The majority of this program will be in Lua.
 - [x] Make a connection program
 - [x] Allow connection to specific computers (using channels)
 - [x] transmit and recieve messages
-- [] connection API/documentation
+- [] "How to Connect to a computer" 
 - [] encryption
 - [] authorization
 - [] disk drive server capable of storing mass amounts of information
+
+So far, the basic connection program is done. so now ill tell you how to use it.
+
+# Installation
+
+## start with a computer on top of a disk drive, like this: 
+
+![A picture of a computer on top of a Disk Drive in ComputerCraft](https://imgur.com/a/UsypGMO)
