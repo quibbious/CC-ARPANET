@@ -62,5 +62,3 @@ if modem then
   else 
     printError("Invalid input.") --error handling
   end
-  end
-end
