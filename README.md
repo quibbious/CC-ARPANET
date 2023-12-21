@@ -6,7 +6,7 @@ The majority of this program will be in Lua.
 
 ### Todo
 
-~~ detect peripherals (disk drive and modem) 
+- ~~detect peripherals (disk drive and modem)~~
 - Make a connection program
 - Allow connection to specific computers (using UUIDs or other methods)
 - transmit and recieve messages
