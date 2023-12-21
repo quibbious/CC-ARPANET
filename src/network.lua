@@ -58,7 +58,9 @@ if modem then
         event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
     until channel == recieveChannelInt -- puts variables into event until the channel variable is equal to the recieving channels variable. This helps prevent spoofing and allows messages from a certain channel. 
      print("Recieved a reply: " .. tostring(message))  -- prints a reply
+  end
   else 
     printError("Invalid input.") --error handling
+  end
   end
 end
