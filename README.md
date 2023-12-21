@@ -49,4 +49,22 @@ Depending on your uses, the user modes will vary. in network.lua, there are two 
 
 **For most people, T/R is the best option because you can send (transmit) and recieve messages.** However, if you are running a Disk Drive Server in CC: Tweaked or Computercraft and you only want your server to recieve data/messages, the "R" mode will work best for you. 
 
+### Setup steps for a T/R or R connection:
+- Enter the computer and type network
+- You will be shown a text prompt that asks if you want to use T/R mode or R mode. choose whichever you want, or refer above to the User Modes.
+- Enter any number from 1-65535 for the recieving channel, and same for the transmit channel if you picked T/R mode. (the numbers to not have to be the same, but for this test they will be.
+- For R Mode, you only have to enter the recieve channel number from 1-65535.
 
+Your screen on the computer should look similar to mine: 
+![https://i.imgur.com/1HlGksk.png](https://i.imgur.com/1HlGksk.png)
+
+- exit the computer and do the same process on the other until it asks for a message.
+- Type in any message you want on one computer, then the other
+- if you enter one computer, you will see the message you typed in one computer (we'll call it A) in the other (computer B)
+- This points out a WIP "feature" of this project.
+
+# You can only send & recieve one message at a time (as of now)
+
+## Yeah, the README says "messages", but this is my first time coding with Lua, so it will be a bit until I figure it out. If you have a suggestion/solution, feel free to make a pull request.
+- The network.lua program can only send and recieve ONE message at a time before needing to be restarted.
+- It can also only recieve ONE message at a time on R mode until needing a restart (of the program, not the computer) 
