@@ -34,7 +34,7 @@ if modem then
     tmessage = read()
 
     print(
-        "broadcasting message " .. '"' .. tessage .. '"' .. " on channel " .. transmitChannelInt .. " recieving on channel " .. recieveChannelInt .. "." -- large broadcast message printed to computer screen.
+        "broadcasting message " .. '"' .. tmessage .. '"' .. " on channel " .. transmitChannelInt .. " recieving on channel " .. recieveChannelInt .. "." -- large broadcast message printed to computer screen.
     )
   
     local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
