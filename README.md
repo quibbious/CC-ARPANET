@@ -11,7 +11,7 @@ The majority of this program will be in Lua.
 - [x] Make a connection program
 - [x] Allow connection to specific computers (using channels)
 - [x] transmit and recieve messages
-- [] connection programs API/documentation
+- [] connection API/documentation
 - [] encryption
 - [] authorization
 - [] disk drive server capable of storing mass amounts of information
