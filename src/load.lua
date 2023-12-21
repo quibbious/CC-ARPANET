@@ -1,4 +1,4 @@
--- This program runs on the computer and grabs the network.lua file that holds network capabilities.
+-- This program runs on the computer and grabs the network.lua file from a floppy disk that holds it.
 
 if fs.exists("/network.lua") then -- checks if /network.lua is a valid directory
     printError("file 'network.lua' already exists") -- error if the file already exists in the root directory
