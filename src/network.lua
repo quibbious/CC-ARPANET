@@ -31,10 +31,10 @@ if modem then
     transmitChannelInt = tonumber(transmitChannel) -- defines the transmitChannel as an integer, as modem.open can only handle integer input.
 
     print("Message to transmit? ")
-    message = read()
+    tmessage = read()
 
     print(
-        "broadcasting message " .. '"' .. message .. '"' .. " on channel " .. transmitChannelInt .. " recieving on channel " .. recieveChannelInt .. "." -- large broadcast message printed to computer screen.
+        "broadcasting message " .. '"' .. tessage .. '"' .. " on channel " .. transmitChannelInt .. " recieving on channel " .. recieveChannelInt .. "." -- large broadcast message printed to computer screen.
     )
   
     local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
@@ -54,7 +54,7 @@ if modem then
     
     modem.open(recieveChannelInt)
 
-    print("Opened Channel " .. recieveChannelInt .. "...")
+    print("Channel " .. recieveChannelInt .. " open.")
     
     local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
     repeat
