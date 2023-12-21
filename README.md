@@ -50,6 +50,7 @@ Depending on your uses, the user modes will vary. in network.lua, there are two 
 **For most people, T/R is the best option because you can send (transmit) and recieve messages.** However, if you are running a Disk Drive Server in CC: Tweaked or Computercraft and you only want your server to recieve data/messages, the "R" mode will work best for you. 
 
 ### Setup steps for a T/R or R connection:
+- (also, dont worry about the "no monitor found" error, you can attach a monitor if you want to get rid of it.) 
 - Enter the computer and type network
 - You will be shown a text prompt that asks if you want to use T/R mode or R mode. choose whichever you want, or refer above to the User Modes.
 - Enter any number from 1-65535 for the recieving channel, and same for the transmit channel if you picked T/R mode. (the numbers to not have to be the same, but for this test they will be.
