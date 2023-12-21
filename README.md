@@ -22,7 +22,7 @@ So far, the basic connection program is done. so now ill tell you how to use it.
 
 ### start with a computer on top of a disk drive, like this: 
 
-![https://imgur.com/3fYqPN9](https://imgur.com/3fYqPN9)]
+![https://imgur.com/3fYqPN9](https://imgur.com/3fYqPN9)
 
 enter the terminal and type these commands: 
 
