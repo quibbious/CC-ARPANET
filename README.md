@@ -20,6 +20,16 @@ So far, the basic connection program is done. so now ill tell you how to use it.
 
 # Installation
 
-## start with a computer on top of a disk drive, like this: 
+### start with a computer on top of a disk drive, like this: 
 
-![](https://imgur.com/3fYqPN9)
+![Computer on top of a Disk Drive](https://imgur.com/3fYqPN9)
+
+enter the terminal and type these commands: 
+
+```
+cd ..
+pastebin get aE9Jr64Z startup.lua
+pastebin get YWxzgzuD load.lua
+pastebin get Ujtukn8D network.lua
+```
+now that you have all the files installed, make sure you have either a modem or an Ender Modem connected to the Computer. Without a modem, network.lua will not run and you will not be able to transmit/recieve messages.
