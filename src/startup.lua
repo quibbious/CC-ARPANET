@@ -5,7 +5,7 @@ print("Starting...")
 sleep(1) -- acts like its doing something, optional to have this line 
 if monitor then -- checks if monitor is present
  
-    monitor.clear()
+    monitor.clear() -- clears the monitor from any previous text
     monitor.setTextScale(1)
     monitor.setCursorPos(2,1)
     print("monitorLinked") -- prints to computer
