@@ -33,10 +33,11 @@ if modem then
     print("Message to transmit? ")
     tmessage = read()
 
+      modem.transmit(transmitChannelInt, recieveChannelInt, tmessage)
     print(
         "broadcasting message " .. '"' .. tmessage .. '"' .. " on channel " .. transmitChannelInt .. " recieving on channel " .. recieveChannelInt .. "." -- large broadcast message printed to computer screen.
     )
-  
+  -- wait for reply
     local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
     repeat
         event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
