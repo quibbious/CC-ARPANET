@@ -25,7 +25,7 @@ if modem then
         while true do 
     print("Message to transmit? ")
     tmessage = read()
-payload = compID .. " " .. tmessage
+payload = compID .. ": " .. tmessage
     print("Channel " .. receiveChannelInt .. " open.")
       modem.transmit(transmitChannelInt, receiveChannelInt, payload)
     print(
