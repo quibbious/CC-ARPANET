@@ -31,9 +31,7 @@ enter the terminal and type these commands:
 
 ```
 cd ..
-pastebin get aE9Jr64Z startup.lua
-pastebin get YWxzgzuD load.lua
-pastebin get Ujtukn8D network.lua
+pastebin get 6e8Cw4nL dependencies.lua
 ```
 Now that you have all the files installed, make sure you have either a modem or an Ender Modem connected to the Computer. Without a modem, network.lua will not run and you will not be able to transmit/receive messages.
 
