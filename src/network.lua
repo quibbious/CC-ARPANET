@@ -9,17 +9,10 @@ if modem then
 
     if user_mode == "T" then 
 
-    print("Transmitting Channel (0-65535): ") -- asks user for input 
+    write("Transmitting Channel (0-65535): ") -- asks user for input 
     transmitChannel = read()
-
-    sleep(1)
-    
-    transmitChannelInt = tonumber(transmitChannel) -- defines the transmitChannel as an integer, as modem.open can only handle integer input.
-        while true do 
-    print("Message to transmit? ")
-    tmessage = read()
-
- write("Recieving Channel #2(0-65535): ") -- asks user for input 
+ transmitChannelInt = tonumber(transmitChannel) -- defines the transmitChannel as an integer, as modem.open can only handle integer input.
+     write("Recieving Channel #2(0-65535): ") -- asks user for input 
 
     receiveChannel = read()
  
@@ -28,6 +21,10 @@ if modem then
     print("Opening channel " .. receiveChannelInt .. "...")
     
     modem.open(receiveChannelInt)
+    
+        while true do 
+    print("Message to transmit? ")
+    tmessage = read()
 
     print("Channel " .. receiveChannelInt .. " open.")
       modem.transmit(transmitChannelInt, recieveChannelInt, tmessage)
