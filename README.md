@@ -33,7 +33,7 @@ enter the terminal and type these commands:
 cd ..
 pastebin get 6e8Cw4nL dependencies.lua
 ```
-Now that you have all the files installed, make sure you have either a modem or an Ender Modem connected to the Computer. Without a modem, network.lua will not run and you will not be able to transmit/receive messages.
+This pastebin command installs all files you will need to have CC:ARPANET. Make sure you have either a modem or an Ender Modem connected to the Computer. Without a modem, network.lua will not run and you will not be able to transmit messages.
 
 Do the same for another computer. this should leave you with two computers on top of their respective Disk Drives, with modems on them. (image below)
 
@@ -41,7 +41,7 @@ Do the same for another computer. this should leave you with two computers on to
 
 # Usage
 
-Depending on your uses, the user modes will vary. in network.lua, there are two (2) user modes.
+Depending on your uses, the user modes will vary. in network.lua, there are two (2) user modes. Receiver Mode is started automatically the next time thee computer starts, as well as Network Mode, which allows the user to send and recieve multiple messages. 
 - Transmit & receive (T/R)
 - receive (R)
 
