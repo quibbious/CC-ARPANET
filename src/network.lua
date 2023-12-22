@@ -27,7 +27,7 @@ if modem then
     tmessage = read()
 
     print("Channel " .. receiveChannelInt .. " open.")
-      modem.transmit(transmitChannelInt, recieveChannelInt, tmessage)
+      modem.transmit(transmitChannelInt, receiveChannelInt, tmessage)
     print(
         "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage .. '"' .. " on channel " .. transmitChannelInt .. " .")-- large broadcast message printed to computer screen.
       end
