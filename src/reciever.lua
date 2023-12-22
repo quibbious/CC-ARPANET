@@ -18,6 +18,5 @@ write("Receiving Channel (0-65535): ") -- asks user for input
         event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
     until channel == receiveChannelInt -- puts variables into event until the channel variable is equal to the recieving channels variable. This helps prevent spoofing and allows messages from a certain channel. 
      print("Recieved a reply: " .. tostring(message))  -- prints a reply
-   return { receiverChannelInt }
 end
 
