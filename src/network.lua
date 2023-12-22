@@ -1,5 +1,4 @@
 local modem = peripheral.find("modem") or error("No modem found", 0) -- checks for a modem 
-receiverChannelInt = require("receiver.lua") -- exp code line 
 local compID = os.getComputerID()
 if modem then
 
@@ -20,6 +19,25 @@ if modem then
     print("Message to transmit? ")
     tmessage = read()
 
+ write("Recieving Channel #2(0-65535): ") -- asks user for input 
+
+    receiveChannel = read()
+ 
+    receiveChannelInt = tonumber(receiveChannel) -- defines the receiveChannel as an integer, as modem.open can only handle integer input.
+
+    print("Opening channel " .. receiveChannelInt .. "...")
+    
+    modem.open(receiveChannelInt)
+
+    print("Channel " .. receiveChannelInt .. " open.")
+    while true do
+    local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
+    repeat
+        event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
+    until channel == receiveChannelInt -- puts variables into event until the channel variable is equal to the recieving channels variable. This helps prevent spoofing and allows messages from a certain channel. 
+     print("received a reply: " .. tostring(message))  -- prints a reply
+        
+      
     tmessage2 = compID .. ":" .. tmessage
       modem.transmit(transmitChannelInt, receiverChannelInt, tmessage)
     print(
@@ -28,9 +46,9 @@ if modem then
       print("Receiving on channel " .. receiverChannelInt .. ".")
 end
   elseif user_mode == "R" then 
-     write("Recieving Channel (0-65535): ") -- asks user for input 
+     write("Recieving Channel #2(0-65535): ") -- asks user for input 
 
-    receiveChannel = read()
+    receiveChannel = read()    
  
     receiveChannelInt = tonumber(receiveChannel) -- defines the receiveChannel as an integer, as modem.open can only handle integer input.
 
