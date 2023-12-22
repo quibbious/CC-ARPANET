@@ -1,4 +1,5 @@
 local modem = peripheral.find("modem") or error("No modem found", 0) -- checks for a modem 
+local receiverInt = require "receiver.lua"
 local compID = os.getComputerID()
 if modem then
 
@@ -20,7 +21,7 @@ if modem then
     tmessage = read()
 
     tmessage2 = compID .. ":" .. tmessage
-      modem.transmit(transmitChannelInt, receiveChannelInt, tmessage)
+      modem.transmit(transmitChannelInt, receiverInt, tmessage)
     print(
         "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage2 .. '"' .. " on channel " .. transmitChannelInt .. " ." -- large broadcast message printed to computer screen.
     )
