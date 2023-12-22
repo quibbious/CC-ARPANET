@@ -29,7 +29,7 @@ if modem then
     sleep(1)
     
     transmitChannelInt = tonumber(transmitChannel) -- defines the transmitChannel as an integer, as modem.open can only handle integer input.
-
+        while true do 
     print("Message to transmit? ")
     tmessage = read()
 
@@ -44,6 +44,7 @@ if modem then
     until channel == recieveChannelInt -- puts variables into event until the channel variable is equal to the recieving channels variable. This helps prevent spoofing and allows messages from a certain channel. 
 
     print("Recieved a reply: " .. tostring(message)) -- prints a reply
+end
   elseif user_mode == "R" then 
      write("Recieving Channel (0-65535): ") -- asks user for input 
 
@@ -56,12 +57,13 @@ if modem then
     modem.open(recieveChannelInt)
 
     print("Channel " .. recieveChannelInt .. " open.")
-    
+    while true do
     local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
     repeat
         event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
     until channel == recieveChannelInt -- puts variables into event until the channel variable is equal to the recieving channels variable. This helps prevent spoofing and allows messages from a certain channel. 
      print("Recieved a reply: " .. tostring(message))  -- prints a reply
+    end
   end
   else 
     printError("Invalid input.") --error handling
