@@ -4,7 +4,7 @@ if modem then
 
   print("modem found!") 
 
-  write("Transmit or receive (Tor R)? ") -- asks user if they want to transmit AND receive , or only receive. 
+  write("Transmit or receive (T or R)? ") -- asks user if they want to transmit AND receive , or only receive. 
     local user_mode = read()
 
     if user_mode == "T" then 
@@ -22,7 +22,7 @@ if modem then
     tmessage2 = compID .. ":" .. tmessage
       modem.transmit(transmitChannelInt, receiveChannelInt, tmessage)
     print(
-        "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage2 .. '"' .. " on channel " .. transmitChannelInt .. " recieving on channel " .. receiveChannelInt .. "." -- large broadcast message printed to computer screen.
+        "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage2 .. '"' .. " on channel " .. transmitChannelInt .. " ." -- large broadcast message printed to computer screen.
     )
 end
   elseif user_mode == "R" then 
