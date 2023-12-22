@@ -18,3 +18,4 @@ write("Recieving Channel (0-65535): ") -- asks user for input
     until channel == recieveChannelInt -- puts variables into event until the channel variable is equal to the recieving channels variable. This helps prevent spoofing and allows messages from a certain channel. 
      print("Recieved a reply: " .. tostring(message))  -- prints a reply
 end
+return
