@@ -12,9 +12,7 @@ The majority of this program will be in Lua.
 - [x] Allow connection to specific computers (using channels)
 - [x] transmit and receive messages
 - [x] "How to Connect to a computer" 
-- [] encryption
-- [] authorization
-- [] disk drive server capable of storing mass amounts of information
+- [] disk drive server capable of storing information
 
 So far, the basic connection program is done. so now ill tell you how to use it.
 
