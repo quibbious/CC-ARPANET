@@ -32,8 +32,7 @@ if modem then
     print("Channel " .. receiveChannelInt .. " open.")
       modem.transmit(transmitChannelInt, recieveChannelInt, tmessage
     print(
-        "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage .. '"' .. " on channel " .. transmitChannelInt .. " ." -- large broadcast message printed to computer screen.
-    )
+        "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage .. '"' .. " on channel " .. transmitChannelInt .. " .")-- large broadcast message printed to computer screen.
       end
     
   elseif user_mode == "R" then 
