@@ -3,8 +3,10 @@
 shell.run("pastebin get UmWLCieW reciever.lua") -- downloads reciever.lua
 shell.run("pastebin get aE9Jr64Z startup.lua") -- downloads startup.lua
 shell.run("pastebin get YWxzgzuD load.lua") -- downloads load.lua
-shell.run("pastebin get Ujtukn8D network.lua") -- downloads network.lua 
+shell.run("pastebin get Ujtukn8D network.lua") -- downloads network.lua
+shell.run("pastebin get E3VPCMnz mirror.lua") -- downloads mirror.lua
         print("All dependencies downloaded.")
 shell.run("reboot")
 shell.run("delete /dependencies.lua")
 
+E3VPCMnz
