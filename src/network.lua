@@ -1,8 +1,8 @@
 local modem = peripheral.find("modem") or error("No modem found", 0) -- checks for a modem 
-local r = require "cc.require"
+local r = require "cc.require" -- experimental code
 local env = setmetatable({}, { __index = _ENV })
 env.require, env.package = r.make(env, "/")
-local receiverInt = require "receiver.lua"
+local receiverInt = require "receiver.lua" -- end exp code
 local compID = os.getComputerID()
 if modem then
 
