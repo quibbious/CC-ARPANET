@@ -7,7 +7,7 @@ write("Receiving Channel (0-65535): ") -- asks user for input
  
     receiveChannelInt = tonumber(recieveChannel) -- defines the recieveChannel as an integer, as modem.open can only handle integer input.
 
-    print("Opening channel " .. receiveChannelInt .. "...")
+    print("Opening channel " .. receiveChannel .. "...")
     
     modem.open(receiveChannelInt)
 
