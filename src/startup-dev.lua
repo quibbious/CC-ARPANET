@@ -1,3 +1,7 @@
+local id = multishell.launch({}, "/reciever.lua")
+
+multishell.setTitle(id, "Reciever")
+
 local modem = peripheral.find("modem") or error("No modem found!", 0) -- checks for modem 
 
 write("Recieving Channel (0-65535): ") -- asks user for input 
