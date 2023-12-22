@@ -1,5 +1,5 @@
 local modem = peripheral.find("modem") or error("No modem found", 0) -- checks for a modem 
-
+local compID = os.getComputerID()
 if modem then
 
   print("modem found!") 
@@ -33,9 +33,10 @@ if modem then
     print("Message to transmit? ")
     tmessage = read()
 
+    tmessage2 = compID .. ":" .. tmessage
       modem.transmit(transmitChannelInt, recieveChannelInt, tmessage)
     print(
-        "broadcasting message " .. '"' .. tmessage .. '"' .. " on channel " .. transmitChannelInt .. " recieving on channel " .. recieveChannelInt .. "." -- large broadcast message printed to computer screen.
+        "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage2 .. '"' .. " on channel " .. transmitChannelInt .. " recieving on channel " .. recieveChannelInt .. "." -- large broadcast message printed to computer screen.
     )
   -- wait for reply
     local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
