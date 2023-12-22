@@ -25,9 +25,9 @@ if modem then
         while true do 
     print("Message to transmit? ")
     tmessage = read()
-
+payload = compID .. " " .. tmessage
     print("Channel " .. receiveChannelInt .. " open.")
-      modem.transmit(transmitChannelInt, receiveChannelInt, tmessage)
+      modem.transmit(transmitChannelInt, receiveChannelInt, payload)
     print(
         "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage .. '"' .. " on channel " .. transmitChannelInt .. " .")-- large broadcast message printed to computer screen.
       end
