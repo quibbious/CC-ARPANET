@@ -3,9 +3,9 @@ local modem = peripheral.find("modem") or error("No modem found!", 0) -- checks 
 
 write("Receiving Channel (0-65535): ") -- asks user for input 
 
-   local receiveChannel = read()
+    receiveChannel = read()
  
-   local receiveChannelInt = tonumber(recieveChannel) -- defines the recieveChannel as an integer, as modem.open can only handle integer input.
+    receiveChannelInt = tonumber(recieveChannel) -- defines the recieveChannel as an integer, as modem.open can only handle integer input.
 
     print("Opening channel " .. receiveChannelInt .. "...")
     
