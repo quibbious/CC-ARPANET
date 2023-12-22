@@ -13,7 +13,7 @@ The majority of this program will be in Lua.
 - [x] transmit and receive messages
 - [x] "How to Connect to a computer" 
 - [] disk drive server capable of storing information
-- [] identification (to prevent spoofing)
+- [x] identification (to prevent spoofing)
 
 So far, the basic connection program is done. so now ill tell you how to use it.
 
