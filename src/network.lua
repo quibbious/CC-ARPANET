@@ -1,5 +1,5 @@
 local modem = peripheral.find("modem") or error("No modem found", 0) -- checks for a modem 
-local receiverChannelInt = require("receiver.lua") -- exp code line 
+receiverChannelInt = require("receiver.lua") -- exp code line 
 local compID = os.getComputerID()
 if modem then
 
