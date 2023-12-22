@@ -30,21 +30,12 @@ if modem then
     modem.open(receiveChannelInt)
 
     print("Channel " .. receiveChannelInt .. " open.")
-    while true do
-    local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
-    repeat
-        event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
-    until channel == receiveChannelInt -- puts variables into event until the channel variable is equal to the recieving channels variable. This helps prevent spoofing and allows messages from a certain channel. 
-     print("received a reply: " .. tostring(message))  -- prints a reply
-        
-      
-    tmessage2 = compID .. ":" .. tmessage
-      modem.transmit(transmitChannelInt, receiverChannelInt, tmessage)
+      modem.transmit(transmitChannelInt, recieveChannelInt, tmessage
     print(
-        "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage2 .. '"' .. " on channel " .. transmitChannelInt .. " ." -- large broadcast message printed to computer screen.
+        "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage .. '"' .. " on channel " .. transmitChannelInt .. " ." -- large broadcast message printed to computer screen.
     )
-      print("Receiving on channel " .. receiverChannelInt .. ".")
-end
+      end
+    
   elseif user_mode == "R" then 
      write("Recieving Channel #2(0-65535): ") -- asks user for input 
 
