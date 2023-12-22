@@ -11,7 +11,7 @@ write("Receiving Channel (0-65535): ") -- asks user for input
     
     modem.open(receiveChannelInt)
 
-    print("Channel " .. receiveChannelInt .. " open.")
+    print("Channel " .. receiveChannel .. " open.")
     while true do
     local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
     repeat
