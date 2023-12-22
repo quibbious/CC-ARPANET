@@ -2,7 +2,7 @@ local modem = peripheral.find("modem") or error("No modem found", 0) -- checks f
 local r = require "cc.require" -- experimental code
 local env = setmetatable({}, { __index = _ENV })
 env.require, env.package = r.make(env, "/")
-local receiverInt = require "receiver.lua" -- end exp code
+local receiverChannelInt = require "receiver.lua" -- end exp code
 local compID = os.getComputerID()
 if modem then
 
@@ -24,10 +24,11 @@ if modem then
     tmessage = read()
 
     tmessage2 = compID .. ":" .. tmessage
-      modem.transmit(transmitChannelInt, receiverInt, tmessage)
+      modem.transmit(transmitChannelInt, receiverChannelInt, tmessage)
     print(
         "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage2 .. '"' .. " on channel " .. transmitChannelInt .. " ." -- large broadcast message printed to computer screen.
     )
+      print("Receiving on channel " .. receiverChannelInt .. ".")
 end
   elseif user_mode == "R" then 
      write("Recieving Channel (0-65535): ") -- asks user for input 
