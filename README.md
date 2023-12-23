@@ -14,6 +14,7 @@ The majority of this program will be in Lua.
 - [x] "How to Connect to a computer" 
 - [] disk drive server capable of storing information
 - [x] identification (to prevent spoofing)
+- [] fancy display on monitors for transmitting & receiving messages (with maybe a touch screen)
 
 So far, the basic connection program is done. so now ill tell you how to use it.
 
