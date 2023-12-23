@@ -4,7 +4,7 @@ if modem then
 
   print("modem found!") 
 
-  write("Transmit or receive (T or R)? ") -- asks user if they want to transmit AND receive , or only receive. 
+  write("Transmit or receive (T or R)? ") -- asks user if they want to transmit or receive
     local user_mode = read()
 
     if user_mode == "T" then 
