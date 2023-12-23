@@ -49,7 +49,7 @@ payload = compID .. ": " .. tmessage
     repeat
         event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
     until channel == receiveChannelInt -- puts variables into event until the channel variable is equal to the recieving channels variable. This helps prevent spoofing and allows messages from a certain channel. 
-     print("received a reply: " .. tostring(message))  -- prints a reply
+     print("received a reply from " .. tostring(message))  -- prints a reply
     end
   end
   else 
