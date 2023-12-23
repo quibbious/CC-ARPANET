@@ -12,7 +12,7 @@ The majority of this program will be in Lua.
 - [x] Allow connection to specific computers (using channels)
 - [x] transmit and receive messages
 - [x] "How to Connect to a computer" 
-- [] disk drive server capable of storing information
+- [] disk drive server capable of storing information (hell no not now)
 - [x] identification (to prevent spoofing)
 - [] fancy display on monitors for transmitting & receiving messages (with maybe a touch screen)
 
