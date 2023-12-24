@@ -46,6 +46,7 @@ Depending on your uses, the user modes will vary. in network.lua, there are two 
 - receive (R)
 
 **For most people, T/R is the best option because you can send (transmit) and receive messages.** However, if you are running a Disk Drive Server in CC: Tweaked or Computercraft and you only want your server to receive data/messages, the "R" mode will work best for you. 
+On computer startup, a "Receiver" Tab shows at the top. Click it and open a channel for listening. This is helpful for keeping things clean looking while transmitting messages, and allows the user to use Recieve mode in conjunction with T/R mode, allowing 2 channels to be open at once. (ex. one port (A) for listening, and and another (B) for transmitting and listening.) 
 
 ### Setup steps for a T/R or R connection:
 - Enter the computer and type network
