@@ -33,7 +33,7 @@ pastebin get 6e8Cw4nL dependencies.lua
 ```
 This pastebin command installs all files you will need to have CC:ARPANET. Make sure you have either a modem or an Ender Modem connected to the Computer. Without a modem, network.lua will not run and you will not be able to transmit messages.
 
-Do the same for another computer. this should leave you with two computers on top of their respective Disk Drives, with modems on them. (image below)
+Do the same for another computer. this should leave you with two computers on top of their respective Disk Drives (disk drives are optional), with modems on them. (image below)
 
 ![https://i.imgur.com/dAp2Ejc.png](https://i.imgur.com/dAp2Ejc.png)
 
