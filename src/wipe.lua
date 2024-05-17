@@ -5,5 +5,5 @@ shell.run("delete startup.lua") -- downloads startup.lua
 shell.run("delete load.lua") -- downloads load.lua
 shell.run("delete network.lua") -- downloads network.lua 
         print("CC:ARPANET Successfully uninstalled")
-shell.run("reboot")
 shell.run("delete /wipe.lua")
+
