@@ -6,15 +6,15 @@ The majority of this program will be in Lua.
 
 ### Todo
 
-- [x] detect peripherals (disk drive and modem)
+- [x] detect peripherals 
 - [x] transfer network files from disk to root drive or programs folder
 - [x] Make a connection program
-- [x] Allow connection to specific computers (using channels)
+- [x] Allow connection to specific computers 
 - [x] transmit and receive messages
 - [x] "How to Connect to a computer" 
-- [] disk drive server capable of storing information (hell no not now)
-- [x] identification (to prevent spoofing)
-- [] fancy display on monitors for transmitting & receiving messages (with maybe a touch screen)
+- [] disk drive server capable of storing information 
+- [1/2] identification 
+
 
 ## Materials/Prerequisites:
 CC:Tweaked or Computercraft is all you need for this guide, as well as basic understanding of code. (functions/variables) 
