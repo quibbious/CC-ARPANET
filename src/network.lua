@@ -1,22 +1,22 @@
-local modem = peripheral.find("modem") or error("No modem found", 0) -- checks for a modem 
+local modem = peripheral.find("modem") or error("No modem found", 0)
 local compID = os.getComputerID()
 if modem then
 
   print("modem found!") 
 
-  write("Transmit or receive (T or R)? ") -- asks user if they want to transmit or receive
+  write("Transmit or receive (T or R)? ") -- asks to transmit only OR recieve only. recieve only could be useful for servers and whatnot.
     local user_mode = read()
 
     if user_mode == "T" then 
 
-    write("Transmitting Channel (0-65535): ") -- asks user for input 
+    write("Transmitting Channel (0-65535): ")
     transmitChannel = read()
- transmitChannelInt = tonumber(transmitChannel) -- defines the transmitChannel as an integer, as modem.open can only handle integer input.
-     write("Recieving Channel #2(0-65535): ") -- asks user for input 
+ transmitChannelInt = tonumber(transmitChannel) -- modem.open can only handle integer input, so we change transmitChannelInt to an integer.
+     write("Recieving Channel #2(0-65535): ")
 
     receiveChannel = read()
  
-    receiveChannelInt = tonumber(receiveChannel) -- defines the receiveChannel as an integer, as modem.open can only handle integer input.
+    receiveChannelInt = tonumber(receiveChannel) -- modem.open can only handle integer input, so we change receiveChannelInt to an integer.
 
     print("Opening channel " .. receiveChannelInt .. "...")
     
@@ -29,11 +29,11 @@ payload = compID .. ": " .. tmessage
     print("Channel " .. receiveChannelInt .. " open.")
       modem.transmit(transmitChannelInt, receiveChannelInt, payload)
     print(
-        "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage .. '"' .. " on channel " .. transmitChannelInt .. " .")-- large broadcast message printed to computer screen.
+        "broadcasting message as " .. compID .. ', ' .. '"' .. tmessage .. '"' .. " on channel " .. transmitChannelInt .. " .")-- big ol' broadcast msg!
       end
     
   elseif user_mode == "R" then 
-     write("Recieving Channel #2(0-65535): ") -- asks user for input 
+     write("Recieving Channel #2(0-65535): ")
 
     receiveChannel = read()    
  
@@ -48,10 +48,10 @@ payload = compID .. ": " .. tmessage
     local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
     repeat
         event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
-    until channel == receiveChannelInt -- puts variables into event until the channel variable is equal to the recieving channels variable. This helps prevent spoofing and allows messages from a certain channel. 
-     print("received a reply from " .. tostring(message))  -- prints a reply
+    until channel == receiveChannelInt -- when the channel transmitting msgs is equal to the receiving channel, stop the loop. 
+     print("received a reply from " .. tostring(message))
     end
   end
   else 
-    printError("Invalid input.") --error handling
+    printError("Invalid input.")
   end
