@@ -12,7 +12,7 @@ if modem then
     write("Transmitting Channel (0-65535): ")
     transmitChannel = read()
  transmitChannelInt = tonumber(transmitChannel) -- modem.open can only handle integer input, so we change transmitChannelInt to an integer.
-     write("Recieving Channel #2(0-65535): ")
+     write("Recieving Channel (0-65535): ")
 
     receiveChannel = read()
  
@@ -37,7 +37,7 @@ payload = compID .. ": " .. tmessage
 
     receiveChannel = read()    
  
-    receiveChannelInt = tonumber(receiveChannel) -- defines the receiveChannel as an integer, as modem.open can only handle integer input.
+    receiveChannelInt = tonumber(receiveChannel) -- modem.open can only handle integer input, so we define receiveChannelInt as an integer of receiveChannel.
 
     print("Opening channel " .. receiveChannelInt .. "...")
     
