@@ -45,7 +45,7 @@ payload = compID .. ": " .. tmessage
 
     print("Channel " .. receiveChannelInt .. " open.")
     while true do
-    local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
+    local event, side, channel, replyChannel, message, distance -- predefines variables used below vvv 
     repeat
         event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
     until channel == receiveChannelInt -- when the channel transmitting msgs is equal to the receiving channel, stop the loop. 
