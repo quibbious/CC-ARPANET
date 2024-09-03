@@ -1,23 +1,18 @@
--- This program runs on the computer and grabs the network.lua file from a floppy disk that holds it.
+-- Copies the network.lua file from a disk to the computer
 
-if fs.exists("/network.lua") then -- checks if /network.lua is a valid directory
-    printError("file 'network.lua' already exists") -- error if the file already exists in the root directory
-else    -- if not, it looks for a disk
-    if fs.exists("/disk") then
-        print("found disk") -- if it finds a disk, it prints it and checks for the directory "/disk/network.lua" (line 10) 
-        sleep(1)
-
-        if fs.exists("/disk/network.lua") then
-            -- lines 12-15 are copying and moving the file "network.lua" to the main filesystem of the computer.
-            print("found network file")
-            fs.copy("/disk/network.lua", "/network.lua")
-            print("Copied network file!")
-            print("network file is in root directory.")
-        else -- if network.lua doesn't exist inside the disk, it prints an error.
-            printError("could not find network.lua, check the file is in the disk directory.") -- error handling 
-        end
+if fs.exists("/network.lua") then 
+    printError("file 'network.lua' already exists") 
+else   
+    if fs.exists("/disk/network.lua") then
+        print("found network file")
+        fs.copy("/disk/network.lua", "/network.lua") -- copy to root directory
+        print("copied network file to root directory.")
+        print("please run the network.lua file to begin.)
     else
-        printError("could not find '/disk' directory. Is there a valid floppy disk?") -- error handling 
+        printError("Unable to locate 'network.lua'. Please make sure that 'network.lua' is in the main directory of the floppy disk.") 
+    end
+    else
+        printError("could not find '/disk' directory. Make sure to put the floppy disk into the disk drive.")
     end
 end
 
