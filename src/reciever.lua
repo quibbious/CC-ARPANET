@@ -1,3 +1,5 @@
+-- Below is the code for Receive-Only mode (R)
+
 local modem = peripheral.find("modem") or error("No modem found!", 0) -- checks for modem 
 
 write("Recieving Channel (0-65535): ") -- asks user for input 
@@ -12,7 +14,7 @@ write("Recieving Channel (0-65535): ") -- asks user for input
 
     print("Channel " .. recieveChannelInt .. " open.")
     while true do
-    local event, side, channel, replyChannel, message, distance -- defines vars, the channel variable here is from the computer contacting us from a channel (x).
+    local event, side, channel, replyChannel, message, distance -- predefines variables so they can be referenced later.
     repeat
         event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
     until channel == recieveChannelInt -- puts variables into event until the channel variable is equal to the recieving channels variable. This helps prevent spoofing and allows messages from a certain channel. 
